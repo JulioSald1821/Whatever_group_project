@@ -1,0 +1,131 @@
+* { box-sizing: border-box;}
+
+body {  background-color: #eaffff;}
+
+h1 { font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     font-weight: bold;
+     font-size: 3em;
+     text-align: center;
+     color: #b22222;
+     letter-spacing: .15em;}
+
+h2 { font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+         font-weight: bold;
+         font-size: 1.5em;
+         text-align: center;
+         color: #20b2aa;}
+
+ul h2 { text-align: left;}
+
+nav {   font-weight: bold;
+        font-size: 1.75em;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align:  center;
+        padding: 5px;}
+
+main {  margin-left: 15%;
+        margin-right: 10%;
+        overflow: auto;}
+
+main div { text-align: center;
+           padding-bottom: 10%;}
+
+nav ul { list-style-image: url(images/dish_marker.gif);
+         margin: 0;}
+
+nav a:link { color: #20b2aa;}
+
+nav li { border-bottom: #b22222 1px solid;}
+
+nav a:visited { color: #b22222;}
+
+nav a:hover { color: #cca300;
+              background-color: #003;}
+
+nav a { text-decoration: none;
+        display: block;}
+
+nav div {font-size: .5em;
+         color: #003;}
+
+#box { background-color: #f5f5f5 ;}
+
+#box2 { border: 2px #003 solid;
+        box-shadow: 1px 1px 1px #000;
+        display: block;
+        margin-top: 10%;}
+
+.right { margin: 10px;
+         float: right;
+         border: #000 1px solid;}
+
+.left { margin: 10px;
+        float: left;
+        border: #000 1px solid;}
+
+footer { font-size: .75em;
+         font-style: italic;
+         font-family: Arial, Helvetica, sans-serif;
+         text-align: center;
+         padding: 2%;}
+
+section { padding-right: 15%;
+          padding-left: 15%;}
+
+table { margin: auto;
+        border: 3px solid #003;
+        width: 50%;}
+
+td, th { color: #8b0000;
+         border-style: none;
+         text-align: center;
+         padding: 5px;
+         font-family: Arial, Helvetica, sans-serif;}
+
+tr:nth-of-type(odd) { background-color: #e6f7ff;}
+tr:nth-of-type(even) { background-color: #a0a0a0;}
+tr:first-of-type { background-color: #b3ffd0;}
+
+#whatever { background-image: url(images/meals.jpg);
+                background-size: 100% 100%;
+                height: 40vw;
+                background-repeat: no-repeat;
+                border: 1px solid #60ccce;}
+
+.dish { font-weight: bold;
+        color: #8b0000;}
+
+ @media (min-width: 600px) {
+    nav ul { display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;}  
+    nav li { border-bottom: none;}
+    #box {display: grid;
+           grid-template-rows: auto;
+           grid-template-columns: auto;}
+    header {grid-row: 1/2; grid-column: 1/2;}
+    nav {grid-row: 2/3; grid-column: 1/2;}
+    div {grid-row: 3/4; grid-column: 1/2;}
+    main {grid-row: 4/5; grid-column: 1/2;}
+    footer {grid-row: 5/6; grid-column: 1/2;}
+    }
+
+@media (min-width: 1024px) {
+    nav ul { flex-direction: column;
+             padding-top: 2px;}
+    nav { text-align: left;
+          padding-top: 2px;}
+    #box { width: 90%;
+               margin: auto;
+               border: #60ccce 5px solid;
+               box-shadow: 1px 1px 1px #eaffff;
+               display: grid;
+               grid-template-columns: 10% 1fr;
+               grid-template-rows: auto;}
+    header { grid-row: 1/2; grid-column: 1/3;}
+    nav { grid-row: 2/4; grid-column: 1/2;}
+    div { grid-row: 2/3; grid-column: 2/3;}
+    main { grid-row: 3/4; grid-column: 2/3;}
+    footer {grid-row: 4/5; grid-column: 2/3;}
+}
