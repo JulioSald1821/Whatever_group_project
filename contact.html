@@ -40,13 +40,26 @@
         </div>
 
         <main>
-            <section>
-                <h2>Swipe Right To Eat Right. </h2>
-                <p>According to the CDC, almost 41.9% of Americans were considered obese. A lot of this is due to fast food and other junk
-                    food eaten throughout the day. What this generation needs is more home cooked, healthy meals, so that's why you should
-                   <span class="dish">swipe right to eat right.</span> 
-                   </span></p>
-            </section>
+
+            <h3>Your Feedback is very important to us!</h3>
+            <p>Please consider filling out the form below. This lets us know if we need to make any improvements to the site, and lets us know how we are doing.
+                If you have any questions or would like to submit a recipe of your own, please let us know either by contact us directly, or add it in the comment section
+            </p><br>
+            <form method="POST" action="https://webdevbasics.net/scripts/demo.php">
+                <label for="myFName">First Name:</label>
+                <input type="text" name="myFName" id="myFName" required="required">
+                <label for="myLName">Last Name:</label>
+                <input type="text" name="myLName" id="myLName" required='required'>
+                <label for="myEmail">E-Mail:</label>
+                <input type="email" name="myEmail" id="myEmail" required='required'><br>
+                <label for="myRating">Rate this site from 1 to 10</label>
+                <input type="number" name="myRating" id="myRating" min="1" max="10"><br>
+                <label for="myRecommendation">How likely are your to recommend this page to others? (1 &ndash; 100)</label>
+                <input type="range" min="1" max="100" name="myRecommendation" id="myRecommendation"><br>
+                <label for="myQuestions">Questions or comments for us</label>
+                <textarea name="myQuestions" id="myQuestions" rows="4" cols="40"></textarea>
+                <input type="submit" value="submit">
+            </form>
         </main>
 
         <footer>
@@ -57,6 +70,4 @@
             <a href="mailto:amgray5@mail.fhsu.edu">amgray5@mail.fhsu.edu</a>
         </footer>
 
-        </div>
-    </body>
-</html>
+    </body>    
